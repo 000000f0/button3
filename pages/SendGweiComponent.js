@@ -51,21 +51,31 @@ const SendGweiComponent = ({ walletAddress, web3, amount }) => {
   };
 
   console.log('Render SendGweiComponent');
-
   return (
     <div>
       <h2>Send {amount} Gwei</h2>
-      <br /><br /><br /><br />
       <p>Address: {walletAddress}</p>
-      <br /><br /><br /><br />
       <button onClick={handleSendGweiClick} disabled={isLoading}>
         {isLoading ? 'Sending...' : `Send ${amount} Gwei`}
       </button>
-      <br /><br /><br /><br />
-      {transactionHash && <p>Transaction Hash: {transactionHash}</p>}
+      {transactionHash && (
+        <div>
+          <p>Transaction Hash: {transactionHash}</p>
+          <p>
+            <a
+              href={`https://goerli.etherscan.io/tx/${transactionHash}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View in Goerli Etherscan
+            </a>
+          </p>
+        </div>
+      )}
       {error && <p>Error: {error}</p>}
     </div>
   );
+  
 };
 
 export default SendGweiComponent;

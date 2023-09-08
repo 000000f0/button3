@@ -63,13 +63,22 @@ const WalletBalanceComponent = ({ walletAddress, web3 }) => {
           </tr>
         </thead>
         <tbody>
-          {transactions.map((transaction, index) => (
-            <tr key={index}>
-              <td>{transaction.blockNumber}</td>
-              <td>{transaction.from}</td>
-              <td>{transaction.to}</td>
-              <td>{web3.utils.fromWei(transaction.value, 'ether')} ETH</td>
-            </tr>
+        {transactions.map((transaction, index) => (
+  <tr key={index}>
+    <td>{transaction.blockNumber}</td>
+    <td>{transaction.from}</td>
+    <td>{transaction.to}</td>
+    <td>{web3.utils.fromWei(transaction.value, 'ether')} ETH</td>
+    <td>
+      <a
+        href={`https://goerli.etherscan.io/tx/${transaction.hash}`}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        View in Goerli Etherscan
+      </a>
+    </td>
+  </tr>
           ))}
         </tbody>
       </table>
