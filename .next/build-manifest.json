@@ -1,84 +1,34 @@
 {
   "polyfillFiles": [
-    "static/chunks/polyfills-5cd94c89d3acac5f.js"
+    "static/chunks/polyfills.js"
   ],
-  "devFiles": [],
-  "ampDevFiles": [],
+  "devFiles": [
+    "static/chunks/react-refresh.js"
+  ],
+  "ampDevFiles": [
+    "static/chunks/webpack.js",
+    "static/chunks/amp.js"
+  ],
   "lowPriorityFiles": [
-    "static/yQ7p36rXGZ0Xp1ra5ax3L/_buildManifest.js",
-    "static/yQ7p36rXGZ0Xp1ra5ax3L/_ssgManifest.js",
-    "static/yQ7p36rXGZ0Xp1ra5ax3L/_middlewareManifest.js"
+    "static/development/_buildManifest.js",
+    "static/development/_ssgManifest.js",
+    "static/development/_middlewareManifest.js"
   ],
   "pages": {
     "/": [
-      "static/chunks/webpack-434fefa8f39d8fbc.js",
-      "static/chunks/framework-24fda4117f092221.js",
-      "static/chunks/main-914fbfab4f90b52f.js",
-      "static/chunks/061e6b60-28bd444bb64e34ae.js",
-      "static/chunks/fec483df-7b77906a52cde6f0.js",
-      "static/chunks/764-3f5101fff012b959.js",
-      "static/chunks/969-658a8b4ef85f7926.js",
-      "static/chunks/366-1350a50a6c126cc6.js",
-      "static/chunks/154-0368397ef3742d1c.js",
-      "static/chunks/pages/index-52031eabeeef64e6.js"
-    ],
-    "/ApiCallComponent": [
-      "static/chunks/webpack-434fefa8f39d8fbc.js",
-      "static/chunks/framework-24fda4117f092221.js",
-      "static/chunks/main-914fbfab4f90b52f.js",
-      "static/chunks/764-3f5101fff012b959.js",
-      "static/chunks/154-0368397ef3742d1c.js",
-      "static/chunks/pages/ApiCallComponent-5ef0548ad72a4d45.js"
-    ],
-    "/BarcodeScannerComponent": [
-      "static/chunks/webpack-434fefa8f39d8fbc.js",
-      "static/chunks/framework-24fda4117f092221.js",
-      "static/chunks/main-914fbfab4f90b52f.js",
-      "static/chunks/061e6b60-28bd444bb64e34ae.js",
-      "static/chunks/fec483df-7b77906a52cde6f0.js",
-      "static/chunks/764-3f5101fff012b959.js",
-      "static/chunks/969-658a8b4ef85f7926.js",
-      "static/chunks/366-1350a50a6c126cc6.js",
-      "static/chunks/pages/BarcodeScannerComponent-a26bdbf746f180be.js"
-    ],
-    "/QRCodeGenerator": [
-      "static/chunks/webpack-434fefa8f39d8fbc.js",
-      "static/chunks/framework-24fda4117f092221.js",
-      "static/chunks/main-914fbfab4f90b52f.js",
-      "static/chunks/pages/QRCodeGenerator-0894fa35070f5fb0.js"
-    ],
-    "/SendGweiComponent": [
-      "static/chunks/webpack-434fefa8f39d8fbc.js",
-      "static/chunks/framework-24fda4117f092221.js",
-      "static/chunks/main-914fbfab4f90b52f.js",
-      "static/chunks/061e6b60-28bd444bb64e34ae.js",
-      "static/chunks/fec483df-7b77906a52cde6f0.js",
-      "static/chunks/764-3f5101fff012b959.js",
-      "static/chunks/969-658a8b4ef85f7926.js",
-      "static/chunks/pages/SendGweiComponent-b64cf48affb69a33.js"
-    ],
-    "/WalletBalanceComponent": [
-      "static/chunks/webpack-434fefa8f39d8fbc.js",
-      "static/chunks/framework-24fda4117f092221.js",
-      "static/chunks/main-914fbfab4f90b52f.js",
-      "static/chunks/061e6b60-28bd444bb64e34ae.js",
-      "static/chunks/fec483df-7b77906a52cde6f0.js",
-      "static/chunks/764-3f5101fff012b959.js",
-      "static/chunks/969-658a8b4ef85f7926.js",
-      "static/chunks/pages/WalletBalanceComponent-139ef4d3f8ddd6c0.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/index.js"
     ],
     "/_app": [
-      "static/chunks/webpack-434fefa8f39d8fbc.js",
-      "static/chunks/framework-24fda4117f092221.js",
-      "static/chunks/main-914fbfab4f90b52f.js",
-      "static/css/98b10f1f211e4c51.css",
-      "static/chunks/pages/_app-bc250ef6d1594f5e.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/_app.js"
     ],
     "/_error": [
-      "static/chunks/webpack-434fefa8f39d8fbc.js",
-      "static/chunks/framework-24fda4117f092221.js",
-      "static/chunks/main-914fbfab4f90b52f.js",
-      "static/chunks/pages/_error-a3f18418a2205cb8.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/_error.js"
     ]
   },
   "ampFirstPages": []

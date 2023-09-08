@@ -4,10 +4,13 @@ import Web3 from 'web3';
 const SendGweiComponent = ({ walletAddress, web3, amount }) => {
   const [transactionHash, setTransactionHash] = useState('');
   const [error, setError] = useState(null);
+  const [isLoading, setLoading] = useState(false); // Added loading state
 
   const handleSendGweiClick = async () => {
     try {
       if (web3 && walletAddress) {
+        setLoading(true); // Set loading to true when the transaction starts
+
         // Hardcoded private key for demonstration purposes only
         const addr_priv = '0x4eaa71ae5d5f71ffe8d000101572c000ebc863ff529905b8a9466681d5dea5fe';
 
@@ -36,12 +39,14 @@ const SendGweiComponent = ({ walletAddress, web3, amount }) => {
         // Transaction was successful, you can access the receipt for details
         setTransactionHash(receipt.transactionHash);
         setError(null);
+        setLoading(false); // Set loading to false when the transaction is complete
       } else {
         setError('Web3 or wallet address not available');
       }
     } catch (error) {
       console.error('Error sending Gwei:', error);
       setError('Error sending Gwei');
+      setLoading(false); // Set loading to false in case of an error
     }
   };
 
@@ -53,7 +58,9 @@ const SendGweiComponent = ({ walletAddress, web3, amount }) => {
       <br /><br /><br /><br />
       <p>Address: {walletAddress}</p>
       <br /><br /><br /><br />
-      <button onClick={handleSendGweiClick}>Send {amount} Gwei</button>
+      <button onClick={handleSendGweiClick} disabled={isLoading}>
+        {isLoading ? 'Sending...' : `Send ${amount} Gwei`}
+      </button>
       <br /><br /><br /><br />
       {transactionHash && <p>Transaction Hash: {transactionHash}</p>}
       {error && <p>Error: {error}</p>}
