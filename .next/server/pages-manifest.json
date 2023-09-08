@@ -1,0 +1,13 @@
+{
+  "/ApiCallComponent": "pages/ApiCallComponent.html",
+  "/BarcodeScannerComponent": "pages/BarcodeScannerComponent.html",
+  "/QRCodeGenerator": "pages/QRCodeGenerator.html",
+  "/SendGweiComponent": "pages/SendGweiComponent.html",
+  "/WalletBalanceComponent": "pages/WalletBalanceComponent.html",
+  "/_app": "pages/_app.js",
+  "/api/hello": "pages/api/hello.js",
+  "/": "pages/index.html",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
+  "/404": "pages/404.html"
+}

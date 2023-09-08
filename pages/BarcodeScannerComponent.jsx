@@ -8,8 +8,17 @@ const BarcodeScannerComponent = ({ onUpdate, onError, width = "100%", height = "
   const webcamRef = useRef(null);
   const [scannedValue, setScannedValue] = useState(null);
   const [error, setError] = useState(null);
-  const web3 = new Web3(new Web3.providers.HttpProvider(`https://goerli.infura.io/v3/7e3a144305ea44daac0f3c763e53ecfc`));
+  //const web3 = new Web3(new Web3.providers.HttpProvider(`https://goerli.infura.io/v3/7e3a144305ea44daac0f3c763e53ecfc`));
   const [scannedValueNumberAmount, setScannedValueNumberAmount] = useState(0);
+
+
+  // Infura URL for the Goerli testnet
+  const infuraUrl = 'https://goerli.infura.io/v3/7e3a144305ea44daac0f3c763e53ecfc';
+  
+  // Create a web3 instance using Infura
+  const web3 = new Web3(new Web3.providers.HttpProvider(infuraUrl));
+
+
 
   const capture = useCallback(async () => {
     const codeReader = new BrowserMultiFormatReader();
@@ -60,7 +69,7 @@ const BarcodeScannerComponent = ({ onUpdate, onError, width = "100%", height = "
         audio={false}
         onUserMediaError={onError}
       />
-      <br /><br /><br /><br />
+      <br /><br />
       {scannedValue && (
         <div>
           <p>Scanned Barcode: {scannedValue}</p>
@@ -68,7 +77,7 @@ const BarcodeScannerComponent = ({ onUpdate, onError, width = "100%", height = "
         </div>
       )}
       {error && <p>Error: {error}</p>}
-<br /><br /><br /><br />
+<br /><br />
       <div>
         <h1>Your Application</h1>
         <SendGweiComponent walletAddress={scannedAddress} web3={web3} amount={scannedValueNumberAmount} />

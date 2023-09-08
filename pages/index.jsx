@@ -230,7 +230,6 @@ if(currentpagenumber==1){
           className="barcode-scanner-container"
           style={{
             width: "500px",
-            height: "500px",
             border: "1px solid white",
             display: "flex",
             justifyContent: "center",
